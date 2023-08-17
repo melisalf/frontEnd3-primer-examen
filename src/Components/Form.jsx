@@ -50,11 +50,8 @@ const Form = () => {
         <input type="text" placeholder='Nombre de su pelicula favorita' onChange={(event) => setPelicula({...pelicula, nombre: event.target.value})}/>
         <label>Director pelicula: </label>
         <input type="text" placeholder='Ingrese el nombre del director' onChange={(event) => setPelicula({...pelicula, director: event.target.value})}/>
-
         <button type='submit'>Enviar datos</button>  
     </form>
-
-    console.log(pelicula.nombre)
     
     {show && ( <Card pelicula= {pelicula}/>)}
     {error && <h4 style={{color: 'red'}}>Por favor chequea que la información sea correcta</h4>}
